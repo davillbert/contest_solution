@@ -15,7 +15,7 @@ int main()
     winners[2] = 0;
     for( ULL i = 3; i <= rocks; ++i)
     {
-        for(int j = i - 1; j <= i - int(sqrt(i)); ++j)
+        for(int j = i - int(sqrt(i)); j <= i - 1; ++j)
             if(winners[j] == 0){ winners[i] == 1; }
     }
 
