@@ -9,7 +9,7 @@ int main()
     cin >> N >> M >> MOD;
     int* a = (int*)malloc(sizeof(int) * (N));
     int* S = (int*)malloc(sizeof(int) * (M));
-    for (int i = 0; i < N + 1; ++i)
+    for (int i = N; i >= 0; --i)
     {
         cin >> a[i];
     }
@@ -17,17 +17,16 @@ int main()
     {
         S[j] = 0;
     }
-
-
     for (int j = 0; j < M; ++j)
     {
         int x;
         cin >> x;
-        for (int i = 2; i < N + 1; ++i)
+        for (int i = N; i > 1; --i)
         {
-           S[j] = ((S[j] + a[i] * x + a[i - 1]) * x) % MOD;
+           S[j] =((S[j] + a[i] * x) * x) % MOD;
         }
         cout << (S[j] + a[0]) % MOD << endl;
+    //    S[j] = 0;
     }
 }
 
