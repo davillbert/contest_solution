@@ -21,11 +21,11 @@ int main()
     {
         int x;
         cin >> x;
-        for (int i = 1; i < N; ++i)
+        for (int i = 0; i < N; ++i)
         {
            S[j] =(S[j] * x + a[i]) % MOD;
         }
-        cout << (S[j]+ a[N]) % MOD << endl;
+        cout << (S[j] * x + a[N]) % MOD << endl;
     //    S[j] = 0;
     }
 }
