@@ -25,10 +25,16 @@ int main()
         {
            S[j] =(S[j] * x + a[i]) % MOD;
         }
-        cout << endl;
-        cout << (S[j] * x + a[0]) % MOD ;
+        S[j] = (S[j] * x + a[0]) % MOD ;
     //    S[j] = 0;
     }
-    free(a);
+
+    for (long long j = 0; j < M; ++j)
+    {
+        cout << S[j] << endl;
+    }
+  free(a);
     free(S);
+    return 0;
+
 }
