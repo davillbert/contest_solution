@@ -7,7 +7,7 @@ int main()
 {
     int N, M, MOD;
     cin >> N >> M >> MOD;
-    int* a = (int*)malloc(sizeof(int) * (N));
+    int* a = (int*)malloc(sizeof(int) * (N + 1));
     int* S = (int*)malloc(sizeof(int) * (M));
     for (int i = N; i >= 0; --i)
     {
@@ -21,7 +21,7 @@ int main()
     {
         int x;
         cin >> x;
-        for (int i = 0; i < N + 1; ++i)
+        for (int i = N; i > 0; --i)
         {
            S[j] =(S[j] * x + a[i]) % MOD;
         }
