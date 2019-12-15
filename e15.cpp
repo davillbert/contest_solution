@@ -7,7 +7,7 @@ int main()
 {
     long long N, M, MOD;
     cin >> N >> M >> MOD;
-    long long* a = (long long*)malloc(sizeof(long long) * (N));
+    long long* a = (long long*)malloc(sizeof(long long) * (N + 1));
     long long* S = (long long*)malloc(sizeof(long long) * (M));
     for (long long i = N; i >= 0; --i)
     {
