@@ -11,13 +11,15 @@ int main()
     while (Y * Y + X * X < N)
     {
         Y++;
-        if (Y * Y + X * X >= N) 
+        while (Y * Y + X * X >= N)
         {
-            X++;
-            Y = 0;
+            Y--;
+         //   Y = 0;
+
         }
-        number++;
+           number = number + Y + 1;
     }
 
     cout << number << endl;
 }
+
