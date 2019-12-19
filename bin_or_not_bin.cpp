@@ -1,27 +1,26 @@
 #include <iostream>
 
 using namespace std;
-using ULL = unsigned long long;
 
-ULL SQRT(ULL y)
+unsigned long long sqrt_search(unsigned long long y)
 {
-    ULL SQ = y;
-    ULL A = y;
+    unsigned long long sqrt = y;
+    unsigned long long A = y;
     if (y <= 0)
         return 0;
     while (1)
     {
         A = (y / A + A) / 2;
-        if (SQ > A)
-            SQ = A;
+        if (sqrt > A)
+            sqrt = A;
         else
-            return SQ;
+            return sqrt;
     }
 }
 
 int main()
 {
-    ULL a;
+    unsigned long long a;
     cin >> a;
-    cout << SQRT(a);
+    cout << sqrt_search(a);
 }
